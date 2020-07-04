@@ -8,13 +8,6 @@ h5 {
 h2 {
   margin-top: 20px;
 }
-.btn-primary {
-  background-color: #ff417e;
-  border: none;
-}
-.btn-primary:hover {
-  background-color: #ff417ea6;
-}
 
 .form-interface {
   margin: 30px auto;
@@ -31,8 +24,36 @@ h2 {
   padding: 10px;
 }
 
+/* added css variables */
 body {
-  background: var(--bkg-color);
+  --text-color: #222;
+  --bg-color: #fff;
+  --text-mild-color: #505050;
+  --primary-color: #ff417e;
+}
+body.dark-theme {
+  --text-color: #eee;
+  --bg-color: #121212;
+  --text-mild-color: #fafafa;
+  --primary-color: #ff417e;
+}
+
+/* our defaults dark theme */
+@media (preference-theme: dark) {
+  body {
+    --text-color: #eee;
+    --bg-color: #121212;
+    --text-mild-color: #505050;
+  }
+  body.light-theme {
+    --text-color: #222;
+    --bg-color: #fff;
+    --text-mild-color: #fafafa;
+  }
+}
+
+body {
+  background: var(--bg-color);
 }
 
 h1,
@@ -40,27 +61,20 @@ p {
   color: var(--text-color);
 }
 
-body {
-  --text-color: #222;
-  --bkg-color: #fff;
-  --text-mild-color: #fafafa;
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
 }
-body.dark-theme {
-  --text-color: #eee;
-  --bkg-color: #121212;
-  --text-mild-color: #fafafa;
+.btn-primary:hover {
+  background-color: #ff417ea6;
 }
 
-@media (preference-theme: dark) {
-  /* our defaults theme */
-  body {
-    --text-color: #eee;
-    --bkg-color: #121212;
-    --text-mild-color: #fafafa;
-  }
-  body.light-theme {
-    --text-color: #222;
-    --bkg-color: #fff;
-    --text-mild-color: #fafafa;
-  }
+h5 {
+  color: var(--text-color);
+}
+h2 {
+  color: var(--text-mild-color);
+}
+label.custom-control-label {
+  color: var(--text-mild-color);
 }
