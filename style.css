@@ -6,24 +6,31 @@ h5 {
   margin-top: 40px;
 }
 h2 {
-    margin-top: 20px;
-  }
+  margin-top: 20px;
+}
 .btn-primary {
   background-color: #ff417e;
   border: none;
 }
 .btn-primary:hover {
-    background-color: #ff417ea6;
-  }
+  background-color: #ff417ea6;
+}
+
 .form-interface {
   margin: 30px auto;
   max-width: 550px;
 }
+
 .btn {
   padding: 10px 100px;
   border-radius: 50px;
   margin: 40px auto;
 }
+
+.nav {
+  padding: 10px;
+}
+
 body {
   background: var(--bkg-color);
 }

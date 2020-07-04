@@ -9,13 +9,24 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="./style.css"
-    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Darkmode Interface</title>
   </head>
   <body>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <div class="custom-control custom-switch">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="customSwitch1"
+          />
+          <label class="custom-control-label" for="customSwitch1"
+            >Darkmode</label
+          >
+        </div>
+      </li>
+    </ul>
     <div class="container">
       <h5 class="card-title text-center">Hi, Welcome to for those who code!</h5>
       <h2 class="text-center font-weight-bolder">Sign In</h2>
@@ -33,10 +44,18 @@
           </div>
           <div class="d-flex justify-content-between">
             <div><p>Forgotten Password?</p></div>
-            <div><div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Keep me signed In</label>
-              </div></div>
+            <div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="customCheck1"
+                />
+                <label class="custom-control-label" for="customCheck1"
+                  >Keep me signed In</label
+                >
+              </div>
+            </div>
           </div>
           <button type="submit" class="d-flex btn btn-primary">Sign In</button>
         </form>
